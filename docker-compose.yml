@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  php:
+    image: php:8.2-fpm-alpine3.18
+    volumes:
+      - ./src:/var/www/html
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "70:70"
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+
