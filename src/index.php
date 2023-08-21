@@ -37,6 +37,7 @@
 <body>
     <?php
         include_once 'compress.php';
+        
     ?>
     <div class="container mt-5 w-50 ml-5">
         <h2 class="h3 text-center mb-3">Add File To Compress  </h2>
@@ -46,7 +47,7 @@
                     <input type="file" name="compress" class="form-control" style="border: 1px solid black">
                 </div>
                 <div class="col-2">
-                    <input type="submit" name="compression" value="Compress" class="btn btn-success">
+                    <input type="submit" name="compression" class="btn btn-success">
                 </div>
             </div>
         </form>
@@ -62,6 +63,7 @@
     // Show loading overlay when form is submitted
     document.querySelector("form").addEventListener("submit", function() {
         document.getElementById("loadingOverlay").style.display = "flex";
+        
     });
 </script>
 </html>
