@@ -35,13 +35,10 @@
         }
     </style>
 <body>
-    <?php
-        include_once 'compress.php';
-        
-    ?>
+   
     <div class="container mt-5 w-50 ml-5">
         <h2 class="h3 text-center mb-3">Add File To Compress  </h2>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="compress.php" method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-10">
                     <input type="file" name="compress" class="form-control" style="border: 1px solid black">
@@ -51,8 +48,10 @@
                 </div>
             </div>
         </form>
-       
     </div>
+    <?php
+        include_once 'compress.php';
+    ?>
     
 <div class="loading-overlay" id="loadingOverlay">
     <div class="loading-spinner"></div>
