@@ -46,7 +46,7 @@ if(isset($_POST['compression'])) {
             echo "<div class='card-body'>";
             foreach ($compressedFiles as $compressedFile) {
                 // Generate a unique download link for each file
-                $downloadLink = '/path/to/compressed_files/' . $compressedFile->filename; // Adjust the path
+                $downloadLink = __DIR__.'/' . $compressedFile->filename; // Adjust the path
                 
                 // Display the download link
                 echo "<a href='$downloadLink' download>" . $compressedFile->filename . "</a><br>";
