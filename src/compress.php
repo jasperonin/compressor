@@ -56,8 +56,10 @@ if(isset($_POST['compression'])) {
             // End the HTML output
             echo "</div>";
 
+            if(http_response_code(504)) {
+                echo "<script>alert('Compression Complete') </script>";
+            }
 
-            echo "<script>alert('Compression Complete') </script>";
         } else {
             echo "ERROR";
         }
